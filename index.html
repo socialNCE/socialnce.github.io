@@ -66,16 +66,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2012.11717"
                    class="external-link button is-normal is-rounded is-dark">
@@ -166,6 +156,81 @@
       </div>
     </div>
     <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Forecasting. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Trajectory forecasting</h2>
+          <p>
+            Our method predicts collision-free trajectories over the whole prediction horizon, 
+            while the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
+          </p>
+          <img src="./asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
+        </div>
+      </div>
+      <!--/ Forecasting. -->
+
+      <!-- Navigation. -->
+      <div class="column">
+        <h2 class="title is-3">Robot navigation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline methods lead to collisions. 
+            </p>
+            <img src="./asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
+          </div>
+
+        </div>
+      </div>
+      <!--/ Matting. -->
+    </div>
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a method to tackle the neural motion model robustness challenge by <b>contrastive representation learning</b> combined with 
+            <b>negative data augmentation</b>:
+          </p>
+          <img src="./asset/illustration.svg" alt="Social NCE illustration" width="100%">
+          <p>             
+            Given a scenario that contains a primary agent of interest (<span style="color:blue">blue</span>) and multiple neighboring agents in the vicinity (<span style="color:gray">gray</span>), 
+            our Social-NCE loss encourages the extracted motion representation, in an embedding space, to be close to a positive future event and apart from some synthetic negative events that could have caused collisions or discomforts.
+          </p>
+          <p>
+            Our method is a type of <b>negative data augmentation</b>.  
+            It intentionally informs the model of lowdensity states through self-supervision, as opposed to laborious data collection from dangerous scenarios.
+          </p>
+          <img src="./asset/distribution.svg" alt="Data distribution" width="100%">
+          <p>
+            Illustration of different learning approaches to socially-aware sequential predictions:
+            <dt>
+              (a) The vanilla supervised learning approach suffers from covariate shift between the training (<span style="color:blue">blue</span>) 
+              and test (<span style="color:red">red</span>) data due to the dependence of the state distribution
+              on the learned model.
+            </dt>
+            <dt>
+              (b) Interactive data collection methods expand the training distribution (<span style="color:green">green</span>) 
+              through additional experiments, which are expensive and even infeasible for forecasting problems.
+            </dt>
+            <dt>
+              (c) Our social contrastive learning approach augments negative data based on prior knowledge, 
+              explicitly informing the learned model about unfavorable states (<span style="color:gray">gray</span>) for improved robustness.
+            </dt>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
   </div>
 </section>
 
