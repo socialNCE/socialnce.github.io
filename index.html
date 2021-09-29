@@ -104,23 +104,6 @@
   </div>
 </section>
 
-
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img style="display:block; margin: 0 auto;" src="./asset/snce.png" width="50%">
-      <video style="display:block; margin: 0 auto;" id="teaser" autoplay muted loop width="100%">
-        <source src="./asset/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Social NCE improves neural motion models robustness.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -162,35 +145,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <!-- Forecasting. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Trajectory forecasting</h2>
-          <p>
-            Our method predicts collision-free trajectories over the whole prediction horizon, 
-            while the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
-          </p>
-          <img src="asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
-        </div>
-      </div>
-      <!--/ Forecasting. -->
-
-      <!-- Navigation. -->
-      <div class="column">
-        <h2 class="title is-3">Robot navigation</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline methods lead to collisions. 
-            </p>
-            <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
-          </div>
-
-        </div>
-      </div>
-      <!--/ Matting. -->
-    </div>
 
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
@@ -198,16 +152,7 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <p>
-            We present a method to tackle the neural motion model robustness challenge by <b>contrastive representation learning</b> combined with 
-            <b>negative data augmentation</b>:
-          </p>
-          <img src="asset/illustration.svg" alt="Social NCE illustration" width="100%">
-          <p>             
-            Given a scenario that contains a primary agent of interest (<span style="color:blue">blue</span>) and multiple neighboring agents in the vicinity (<span style="color:gray">gray</span>), 
-            our Social-NCE loss encourages the extracted motion representation, in an embedding space, to be close to a positive future event and apart from some synthetic negative events that could have caused collisions or discomforts.
-          </p>
-          <p>
-            Our method is a type of <b>negative data augmentation</b>.  
+            Our method can be viewed as a form of <b>negative data augmentation</b>.  
             It intentionally informs the model of lowdensity states through self-supervision, as opposed to laborious data collection from dangerous scenarios.
           </p>
           <img src="asset/distribution.svg" alt="Data distribution" width="100%">
@@ -227,10 +172,50 @@
               explicitly informing the learned model about unfavorable states (<span style="color:gray">gray</span>) for improved robustness.
             </dt>
           </p>
+          <p>
+            We present a method to tackle the neural motion model robustness challenge by <b>contrastive representation learning</b> combined with 
+            <b>negative data augmentation</b>:
+          </p>
+          <img src="asset/illustration.svg" alt="Social NCE illustration" width="100%">
+          <p>             
+            Given a scenario that contains a primary agent of interest (<span style="color:blue">blue</span>) and multiple neighboring agents in the vicinity (<span style="color:gray">gray</span>), 
+            our Social-NCE loss encourages the extracted motion representation, in an embedding space, to be close to a positive future event and apart from some synthetic negative events that could have caused collisions or discomforts.
+          </p>          
         </div>
       </div>
     </div>
     <!--/ Method. -->
+
+    <div class="columns is-centered">
+      <!-- Forecasting. -->
+<!--       <div class="column"> -->
+        <div class="content">
+          <h2 class="title is-3">Trajectory forecasting</h2>
+          <p>
+            Our method predicts collision-free trajectories over the whole prediction horizon, 
+            while the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
+          </p>
+          <img src="asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
+        </div>
+<!--       </div> -->
+      <!--/ Forecasting. -->
+
+      <!-- Navigation. -->
+<!--       <div class="column"> -->
+        <h2 class="title is-3">Robot navigation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline methods lead to collisions. 
+            </p>
+            <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
+          </div>
+
+        </div>
+<!--       </div> -->
+      <!--/ Matting. -->
+    </div>
+
   </div>
 </section>
 
