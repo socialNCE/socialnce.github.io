@@ -152,8 +152,20 @@
         <h2 class="title is-3">Intuition</h2>
         <div class="content has-text-justified">
           <p>
-            Our method can be viewed as a form of <b>negative data augmentation</b>.  
-            It intentionally informs the model of lowdensity states through self-supervision, as opposed to laborious data collection from dangerous scenarios.
+            Why is it difficult to learn a robust motion representation? The key challenge stems from two sources.
+            <dt>            
+              (i) Sequential prediction is not an I.I.D. problem.
+            </dt>
+            <dt>            
+              (ii) Training data is often severely imbalanced and lack near-accident examples.
+            </dt>
+            Given such an ill-distributed training data, how can we learn a robust model for closed-loop sequential prediction?
+          </p>
+          <p>
+            <b>In this work, we aim to address this challenge by promoting robust motion representations through self-supervision.</b>
+          </p>
+          <p>            
+            Our key idea is to explicitly model negative examples based on our prior knowledge. Intuitively, one effective way to explain the social norms behind positive examples is to portray the opposite negative examples like collisions. Our method can be viewed as a form of negative data augmentation through self-supervision, as opposed to laboriously collecting additional state-action pairs from dangerous scenarios.
           </p>
           <img src="asset/distribution.svg" alt="Data distribution" width="100%">
           <p>
