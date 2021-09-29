@@ -192,14 +192,13 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <p>
-            We present a method to tackle the neural motion model robustness challenge by <b>contrastive representation learning</b> combined with 
-            <b>negative data augmentation</b>:
+            We formulate this intuition into a new learning framework that consists of two components, a <b>social contrastive loss</b> and a <b>negative sampling strategy</b>.
           </p>
           <img src="asset/illustration.svg" alt="Social NCE illustration" width="100%">
-          <p>             
+          <p>
             Given a scenario that contains a primary agent of interest (<span style="color:blue">blue</span>) and multiple neighboring agents in the vicinity (<span style="color:gray">gray</span>), 
             our Social-NCE loss encourages the extracted motion representation, in an embedding space, to be close to a positive future event and apart from some synthetic negative events that could have caused collisions or discomforts.
-          </p>          
+          </p>
         </div>
       </div>
     </div>
@@ -225,7 +224,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline methods lead to collisions. 
+              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline method crashes with collisions. 
             </p>
             <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
           </div>
