@@ -121,7 +121,7 @@
             In this work, we aim to address this issue by explicitly modeling negative examples through self-supervision: 
             (i) we introduce a social contrastive loss that regularizes the extracted motion representation by discerning the ground-truth positive events from synthetic negative ones; 
             (ii) we construct informative negative samples based on our prior knowledge of rare but dangerous circumstances.           
-            Our method substantially reduces the collision rates ofrecent trajectory forecasting, behavioral cloning and reinforcement learning algorithms, outperforming state-of-the-art methods on several benchmarks.
+            Our method substantially reduces the collision rates of recent trajectory forecasting, behavioral cloning and reinforcement learning algorithms, outperforming state-of-the-art methods on several benchmarks.
           </p>
         </div>
       </div>
@@ -131,7 +131,7 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+<!--         <h2 class="title is-3">Video</h2> -->
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/s1khZWWiQfA"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -151,13 +151,13 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Intuition</h2>
         <div class="content has-text-justified">
-          <p>
+<!--           <p>
             Why is it difficult to learn a robust motion representation? The key challenge stems from two sources.
             <dl>
               <dt>(i) Sequential prediction is not an I.I.D. problem.</dt>
               <dt>(ii) Training data is often severely imbalanced and lack near-accident examples.</dt>
             </dl>
-          </p>
+          </p> -->
           <p>
             <i>In this work, we aim to address this challenge by promoting robust motion representations through self-supervision.</i>
           </p>
@@ -206,7 +206,7 @@
 
     <div class="columns is-centered">
       <!-- Forecasting. -->
-      <div class="column">
+<!--       <div class="column">
         <div class="content">
           <h2 class="title is-3">Trajectory forecasting</h2>
           <p>
@@ -214,12 +214,21 @@
             while the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
           </p>
           <img src="asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
+        </div>   
+      </div> -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Trajectory Forecasting</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method tends to jointly adjust the trajectories of multiple agents and outputs more plausible solutions, whereas the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
+          </p>
+          <img src="asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
         </div>
       </div>
       <!--/ Forecasting. -->
 
       <!-- Navigation. -->
-      <div class="column">
+<!--       <div class="column">
         <h2 class="title is-3">Robot navigation</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -228,10 +237,18 @@
             </p>
             <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
           </div>
-
         </div>
-      </div>
-      <!--/ Matting. -->
+      </div> -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Robot Navigation</h2>
+        <div class="content has-text-justified">
+          <p>
+            The agent trained with our method is already able to accomplish the navigation task safely and efficiently, whereas the baseline one crashes with collisions. 
+          </p>
+          <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
+        </div>
+      </div>      
+      <!--/ Navigation. -->
     </div>
 
   </div>
