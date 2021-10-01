@@ -151,22 +151,13 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Intuition</h2>
         <div class="content has-text-justified">
-<!--           <p>
-            Why is it difficult to learn a robust motion representation? The key challenge stems from two sources.
-            <dl>
-              <dt>(i) Sequential prediction is not an I.I.D. problem.</dt>
-              <dt>(ii) Training data is often severely imbalanced and lack near-accident examples.</dt>
-            </dl>
-          </p> -->
-<!--           <p>
-            <i>In this work, we aim to address this challenge by promoting robust motion representations through self-supervision.</i>
-          </p> -->
           <p>            
             Our key idea is to explicitly model negative examples based on our prior knowledge. Intuitively, one effective way to explain the social norms behind positive examples is to portray the opposite negative examples like collisions. Our method can be viewed as a form of negative data augmentation through self-supervision, as opposed to laboriously collecting additional state-action pairs from dangerous scenarios.
           </p>
           <img src="asset/distribution.svg" alt="Data distribution" width="100%">
+          <br>
           <p>
-            Illustration of different learning approaches to socially-aware sequential predictions:
+            Above is an illustration of different learning approaches to sequential predictions:
             <dt>
               (a) The vanilla supervised learning approach suffers from covariate shift between the training (<span style="color:blue">blue</span>) 
               and test (<span style="color:red">red</span>) data due to the dependence of the state distribution
@@ -186,6 +177,8 @@
     </div>
     <!--/ Intuition. -->    
     
+    <br>
+    
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -204,18 +197,10 @@
     </div>
     <!--/ Method. -->
 
+    <br>
+    
     <div class="columns is-centered has-text-centered">
       <!-- Forecasting. -->
-<!--       <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Trajectory forecasting</h2>
-          <p>
-            Our method predicts collision-free trajectories over the whole prediction horizon, 
-            while the vanilla method leads to collisions between the primary (<span style="color:black">black</span>) and the nearby agent (<span style="color:red">red</span>).
-          </p>
-          <img src="asset/gif-traj.gif" style="display:block; margin: 0 auto;" alt="Gif for trajectory forecasting" height="100%">
-        </div>   
-      </div> -->
       <div class="column is-full-width">
         <h2 class="title is-3">Trajectory Forecasting</h2>
         <div class="content has-text-justified">
@@ -228,17 +213,6 @@
       <!--/ Forecasting. -->
 
       <!-- Navigation. -->
-<!--       <div class="column">
-        <h2 class="title is-3">Robot navigation</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Our method results in an agent of sufficient social awareness to accomplish the navigation task safely and efficiently, whereas the baseline method crashes with collisions. 
-            </p>
-            <img src="asset/gif-nav.gif" style="display:block; margin: 0 auto;" alt="Gif for robot navigation" height="100%">
-          </div>
-        </div>
-      </div> -->
       <div class="column is-full-width">
         <h2 class="title is-3">Robot Navigation</h2>
         <div class="content has-text-justified">
